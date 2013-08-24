@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<td><%= @user_detail.name %></td>
+<td><%= @user_detail.email_id %></td>
+<td><%= @user_detail.phone_number %></td>
+
+<%= link_to 'Edit', edit_user_detail_path(@user_detail) %> |
+<%= link_to 'Back', user_details_path %>
