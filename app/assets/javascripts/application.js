@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui-1.10.3.custom.min
 //= require_tree .
 //= require bootstrap
+
+$(function(){
+  $.datepicker.setDefaults({dateFormat: 'dd/mm/yy', minDate: new Date});
+  $("#datepicker").datepicker();
+});
