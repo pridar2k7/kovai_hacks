@@ -1,8 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<td><%= @user_detail.name %></td>
-<td><%= @user_detail.email_id %></td>
-<td><%= @user_detail.phone_number %></td>
+<table class = 'table table-bordered table-striped table-hover'>
+<tr>
+    <th>Name</th>
+    <th>Phone number</th>
+    <th>E-mail id</th>
+</tr>
+	<td><%= @user_detail.name %></td>
+	<td><%= @user_detail.email_id %></td>
+	<td><%= @user_detail.phone_number %></td>
+</table>
 
 <%= link_to 'Edit', edit_user_detail_path(@user_detail) %> |
 <%= link_to 'Back', user_details_path %>
