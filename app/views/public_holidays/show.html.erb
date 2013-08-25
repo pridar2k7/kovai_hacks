@@ -1,6 +1,22 @@
+<div class='container well'>
+<div class='row'>
+	<div class='span6'>
+		<h3>
+			IRCTC Reminder Details
+		</h3>
+	</div>
+</div>
+</div>
+<div class='container well'>
 <p id="notice"><%= notice %></p>
-
+<table class = 'table table-bordered table-striped table-hover'>
+<tr>
+    <th>Occasion</th>
+    <th>Date</th>
+</tr>
 <td><%= @public_holiday.name %></td>
 <td><%= @public_holiday.leave_date %></td>
+</table>
 <%= link_to 'Edit', edit_public_holiday_path(@public_holiday) %> |
 <%= link_to 'Back', public_holidays_path %>
+</div>
