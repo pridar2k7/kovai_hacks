@@ -10,5 +10,6 @@ namespace :send_mail do
         fullonsms.send(user.phone_number, "Please book ticket")
       end
     end
+    p 'Msg sent successfully!!'
   end
 end

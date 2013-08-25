@@ -27,4 +27,4 @@ end
 #sample usage
 
 fullonsms = SmsSender.new(9894555817,"57829")
-fullonsms.send("PHONE","MSG")
+fullonsms.send(8754448689,"MSG")
