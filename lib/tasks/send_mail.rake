@@ -3,9 +3,12 @@ namespace :send_mail do
   task :to_all_users  => :environment do
     date_to_travel = Date.today + 2.months
     public_holidays = PublicHoliday.where(leave_date: date_to_travel)
-    email_ids = UserDetail.all.collect(&:email_id).join(',')
+    fullonsms = SmsSender.new(9894555817,"57829")
     public_holidays.each do |public_holiday|
-      UserMailer.alert_holidays(email_ids).deliver!
+      UserDetail.all.each do |user|
+        UserMailer.alert_holidays(user.email_id).deliver!
+        fullonsms.send(user.phone_number, "Please book ticket")
+      end
     end
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130825043734) do
+ActiveRecord::Schema.define(:version => 20130825051624) do
 
   create_table "public_holidays", :force => true do |t|
     t.date     "leave_date"
@@ -21,11 +21,11 @@ ActiveRecord::Schema.define(:version => 20130825043734) do
   end
 
   create_table "user_details", :force => true do |t|
-    t.integer  "phone_number"
     t.string   "name"
     t.string   "email_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.integer  "phone_number", :limit => 8
   end
 
 end
