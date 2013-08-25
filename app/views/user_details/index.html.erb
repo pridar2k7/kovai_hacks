@@ -1,5 +1,15 @@
+<div class='container well'>
+<div class='row'>
+  <div class='span6'>
+    <h3>
+      IRCTC Reminder Details
+    </h3>
+  </div>
+</div>
+</div>
+
 <div class='well'>
-<h3>User details</h3>
+<h4>User details</h4>
 
 <table class = 'table table-bordered table-striped table-hover'>
   <%if @user_details.any?%>
@@ -9,7 +19,6 @@
     <th>E-mail id</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 <%end%>
 <% @user_details.each do |user_detail| %>
@@ -17,7 +26,6 @@
     <td><%= user_detail.name %></td>
     <td><%= user_detail.phone_number %></td>
     <td><%= user_detail.email_id %></td>
-    <td><%= link_to 'Show', user_detail %></td>
     <td><%= link_to 'Edit', edit_user_detail_path(user_detail) %></td>
     <td><%= link_to 'Destroy', user_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
